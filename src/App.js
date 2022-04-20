@@ -11,13 +11,11 @@ const prefsResource = Resource.fromAxios(axios.get('https://opendata.resas-porta
 const App = () => {
     return (
         <div className='app'>
-            <Title>Yumemi Frontend Coding Test</Title>
+            <Title>Yumemi Coding Test</Title>
             <Suspense fallback={<p>loading...</p>}>
                 <div className='main'>
-                    <PrefSelect prefsResource={prefsResource}></PrefSelect>
-                    <Suspense fallback={<p>loading...</p>}>
-                        <Chart />
-                    </Suspense>
+                    <PrefSelect prefsResource={prefsResource} />
+                    <Chart prefsResource={prefsResource} />
                 </div>
             </Suspense>
         </div>

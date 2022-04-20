@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     -webkit-user-drag: none;
 }
 html, body, .app {
@@ -15,10 +18,14 @@ html, body, .app {
     width: 100vw;
     height: calc(100vh - 50px);
 }
+@media screen and (max-width: 959px) {
+    .main {
+        flex-direction: column;
+    }
+}
 ::-webkit-scrollbar {
     width: calc(.6rem + 2px);
 }
-
 ::-webkit-scrollbar-track {
     margin: 1px;
 }
