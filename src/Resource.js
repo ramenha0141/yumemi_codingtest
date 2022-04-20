@@ -8,6 +8,11 @@ class Resource {
             this.state = 'rejected';
         })
     }
+    static fromAxios(axios) {
+        return new Resource(new Promise(
+            (resolve, reject) => axios.then((data) => resolve(data.data)).catch(e => reject(e))
+        ));
+    }
     state = 'pending';
     _data = null;
     get data() {

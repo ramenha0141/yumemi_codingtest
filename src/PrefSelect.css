@@ -1,0 +1,31 @@
+.prefselect {
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-right: solid 1px #aaa;
+    padding: 6px 0;
+    font-size: 16px;
+}
+.prefselect-item {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+    flex-shrink: 0;
+}
+.prefselect-item:hover {
+    background-color: #e9ecef;
+}
+.prefselect-item.checked {
+    background-color: #f0f9ff;
+}
+.prefselect-item > p {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

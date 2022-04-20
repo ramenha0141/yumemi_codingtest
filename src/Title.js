@@ -1,7 +1,8 @@
+import './Title.css';
 const Title = (props) => {
     return (
         <div className='title'>
-            <h1>{props.children}</h1>
+            <p>{props.children}</p>
         </div>
     );
 }
